@@ -1,0 +1,28 @@
+<div class="groups">
+  <h1>Fase de grupos</h1>
+  <div class="countries-row">
+    <div class="group" *ngFor="let group of groups.slice(0, 4); let i = index">
+      <h2 class="group-text"> Grupo {{i + 1}}</h2>
+      <div cdkDropList class="countries-collumn" (cdkDropListDropped)="drop($event, i)">
+        <div class="country" *ngFor="let country of group" cdkDrag>
+          <div class="placeholder" *cdkDragPlaceholder></div>
+          <div class="flag" [ngStyle]="{'background-image' : 'url(' + country.img + ')'}"></div>
+          <span class="country-name">{{country.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="countries-row">
+    <div class="group" *ngFor="let group of groups.slice(4, 8); let i = index">
+      <h2 class="group-text"> Grupo {{i + 5}}</h2>
+      <div cdkDropList class="countries-collumn" (cdkDropListDropped)="drop($event, i + 4)">
+        <div class="country" *ngFor="let country of group" cdkDrag>
+          <div class="placeholder" *cdkDragPlaceholder></div>
+          <div class="flag" [ngStyle]="{'background-image' : 'url(' + country.img + ')'}"></div>
+          <span class="country-name">{{country.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

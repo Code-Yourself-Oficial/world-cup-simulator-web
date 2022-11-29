@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  background: rgb(82,167,129);
+  background: linear-gradient(353deg, rgba(82,167,129,1) 15%, rgba(56,171,202,1) 100%);
+}
+
+h1 {
+  font-family: 'Poppins';
+  color: white;
+  font-weight: 400;
+  font-size: 28px;
+  width: 860px;
+}

@@ -1,0 +1,95 @@
+.groups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(0px, 3px, 6px rgba(0,0,0.25));
+
+  :last-child.countries-row {
+    margin-top: 20px;
+  }
+}
+
+.countries-row {
+  display: flex;
+  justify-content: space-between;
+  width: 860px;
+}
+
+.group-text {
+  font-family: 'Poppins';
+  color: #FFF;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.countries-collumn {
+  width: 200px;
+}
+
+.country {
+  height: 40px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F0F0F0;
+  cursor: move;
+}
+
+.country:first-child {
+  border-start-end-radius: 8px;
+  border-start-start-radius: 8px;
+  background-color: #A2E1B0;
+}
+
+.country:nth-child(2) {
+  background-color: #daf9e1;
+}
+
+.country:last-child {
+  border-end-end-radius: 8px;
+  border-end-start-radius: 8px;
+}
+
+.flag {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  margin-left: 8px;
+}
+
+.country-name {
+  font-size: 16px;
+  font-family: 'Poppins';
+  margin-left: 8px;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.countries-collumn.cdk-drop-list-dragging .country:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.countries-collumn.cdk-drop-list-dragging
+.country {
+  border-radius: 0px;
+}
+
+.placeholder {
+  background: #ccc;
+  border: dotted 2px #999;
+  box-sizing: border-box;
+  min-height: 40px;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.country.cdk-drag-preview {
+  border-radius: 0px;
+}
